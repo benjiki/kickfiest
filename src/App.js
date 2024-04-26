@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Prem from "./pages/Prem";
+import Champ from "./pages/Champ";
+import Cup from "./pages/Cup";
+import Alltime from "./pages/Alltime";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/prem" element={<Prem />} />
+      <Route path="/champ" element={<Champ />} />
+      <Route path="/cup" element={<Cup />} />
+      <Route path="/allTime" element={<Alltime />} />
+    </Routes>
   );
 }
 
